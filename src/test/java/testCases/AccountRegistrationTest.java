@@ -17,10 +17,10 @@ public class AccountRegistrationTest extends BaseClass {
 
             homePage hp = new homePage(driver);
 
-            hp.setLnkMyaccount();
+            hp.clickMyAccount();
             logger.info("Clicked on MyAccount Link.. ");
 
-            hp.setLnkRegister();
+            hp.clickRegister();
             logger.info("Clicked on Register Link.. ");
 
             registrationPage rp = new registrationPage(driver);

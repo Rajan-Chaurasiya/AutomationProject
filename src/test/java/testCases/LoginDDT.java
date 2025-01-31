@@ -17,8 +17,8 @@ public class LoginDDT extends BaseClass {
         try {
             //home page
             homePage hp = new homePage(driver);
-            hp.setLnkMyaccount();
-            hp.setLnkLogin();
+            hp.clickMyAccount();
+            hp.clickLogin();
 
             //login page
             loginPage lp = new loginPage(driver);

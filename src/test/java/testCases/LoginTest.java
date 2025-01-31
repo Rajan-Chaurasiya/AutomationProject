@@ -34,7 +34,7 @@ public class LoginTest extends BaseClass {
             lp.clickLoginButton();
 
             myAccount ma = new myAccount(driver);
-            boolean isLoggedIn = ma.verifyLogin();
+            boolean isLoggedIn = ma.verifyLoginMessage();
             Assert.assertTrue(isLoggedIn, "Login failed!");
 
             logger.info("Login test passed.");
