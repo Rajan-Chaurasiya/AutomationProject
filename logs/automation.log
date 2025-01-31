@@ -10,3 +10,15 @@
 13:30:26.113 [main] INFO  testCases.LoginTest - Providing Login details...
 13:30:27.705 [main] INFO  testCases.LoginTest - Validating expected message..
 13:30:27.796 [main] INFO  testCases.LoginTest - Finished LoginTest
+23:14:13.262 [main] INFO  testCases.AccountRegistrationTest - ***** Starting TC001_AccountRegistrationTest  ****
+23:14:14.260 [main] INFO  testCases.AccountRegistrationTest - Clicked on MyAccount Link.. 
+23:14:15.182 [main] INFO  testCases.AccountRegistrationTest - Clicked on Register Link.. 
+23:14:15.187 [main] INFO  testCases.AccountRegistrationTest - Providing customer details...
+23:14:17.548 [main] INFO  testCases.AccountRegistrationTest - Validating expected message..
+23:14:17.646 [main] INFO  testCases.AccountRegistrationTest - ***** Finished TC001_AccountRegistrationTest *****
+23:14:22.473 [main] INFO  testCases.LoginTest - ***** Starting TC001_AccountRegistrationTest  ****
+23:14:22.473 [main] INFO  testCases.LoginTest - Clicked on MyAccount Link.. 
+23:14:23.408 [main] INFO  testCases.LoginTest - Clicked on Register Link.. 
+23:14:23.958 [main] INFO  testCases.LoginTest - Providing Login details...
+23:14:25.545 [main] INFO  testCases.LoginTest - Validating expected message..
+23:14:25.622 [main] INFO  testCases.LoginTest - Finished LoginTest
