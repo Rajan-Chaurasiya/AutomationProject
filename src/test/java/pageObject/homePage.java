@@ -8,31 +8,47 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class homePage extends BasePage{
+/**
+ * homePage class that represents the home page of the application.
+ * It extends the BasePage class and provides methods to interact with the home page elements.
+ */
+public class homePage extends BasePage {
 
-
+    // Constructor to initialize the WebDriver and PageFactory elements
     public homePage(WebDriver driver) {
         super(driver);
     }
 
+    // WebElement for 'My Account' link
     @FindBy(xpath = "//span[normalize-space()='My Account']")
-    WebElement lnkMyaccount;
+    private WebElement lnkMyaccount;
 
+    // WebElement for 'Register' link
     @FindBy(xpath = "//a[normalize-space()='Register']")
-    WebElement lnkRegister;
+    private WebElement lnkRegister;
 
+    // WebElement for 'Login' link
     @FindBy(xpath = "//a[normalize-space()='Login']")
-    WebElement lnkLogin;
+    private WebElement lnkLogin;
 
-    public void setLnkMyaccount() {
+    /**
+     * Clicks on the 'My Account' link.
+     */
+    public void clickMyAccount() {
         lnkMyaccount.click();
     }
 
-    public void setLnkRegister() {
+    /**
+     * Clicks on the 'Register' link.
+     */
+    public void clickRegister() {
         lnkRegister.click();
     }
 
-    public void setLnkLogin(){
+    /**
+     * Clicks on the 'Login' link.
+     */
+    public void clickLogin() {
         lnkLogin.click();
     }
 }

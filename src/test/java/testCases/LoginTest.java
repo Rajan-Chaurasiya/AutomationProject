@@ -7,40 +7,40 @@ import pageObject.loginPage;
 import pageObject.myAccount;
 import testBase.BaseClass;
 
+/**
+ * LoginTest class that contains test cases for login functionality.
+ */
 public class LoginTest extends BaseClass {
 
-   @Test(groups = {"Sanity","Master"})
-   public void logintest(){
-    try {
-        logger.info("***** Starting TC001_AccountRegistrationTest  ****");
-        logger.debug("This is a debug log message");
+    /**
+     * Test method to verify the login functionality.
+     */
+    @Test(groups = {"Sanity", "Master"})
+    public void logintest() {
+        try {
+            logger.info("***** Starting TC001_AccountRegistrationTest *****");
+            logger.debug("This is a debug log message");
 
-        homePage hp = new homePage(driver);
-        logger.info("Clicked on MyAccount Link.. ");
-        hp.setLnkMyaccount();
-        logger.info("Clicked on Register Link.. ");
-        hp.setLnkLogin();
+            homePage hp = new homePage(driver);
+            logger.info("Navigating to My Account...");
+            hp.clickMyAccount();
+            logger.info("Navigating to Login...");
+            hp.clickLogin();
 
-        loginPage lp = new loginPage(driver);
-        logger.info("Providing Login details...");
-        lp.setLoginEmail(p.getProperty("USERNAME"));
-        lp.setLoginPassword(p.getProperty("PASSWORD"));
-        lp.clickLoginButton();
+            loginPage lp = new loginPage(driver);
+            logger.info("Providing login details...");
+            lp.setLoginEmail(p.getProperty("USERNAME"));
+            lp.setLoginPassword(p.getProperty("PASSWORD"));
+            lp.clickLoginButton();
 
-        myAccount myAcc = new myAccount(driver);
-        logger.info("Validating expected message..");
-        Assert.assertTrue(myAcc.verifyLoginMessage());
+            myAccount ma = new myAccount(driver);
+            boolean isLoggedIn = ma.verifyLogin();
+            Assert.assertTrue(isLoggedIn, "Login failed!");
 
-
-    } catch (Exception e) {
-        logger.error("Test Failed: "+e.getMessage());
-        Assert.fail("Test Failed: "+e.getMessage());
+            logger.info("Login test passed.");
+        } catch (Exception e) {
+            logger.error("Login test failed.", e);
+            Assert.fail("Login test failed due to an exception.");
+        }
     }
-    finally {
-        logger.info("Finished LoginTest");
-    }
-
-
-
-   }
 }
