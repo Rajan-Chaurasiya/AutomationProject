@@ -29,6 +29,8 @@ public class SearchProductTest extends BaseClass {
         } catch (Exception e) {
             logger.error("Search Test Case failed",e);
             Assert.fail();
+        }finally {
+            logger.info("Search Product Test Case completed");
         }
     }
 }
