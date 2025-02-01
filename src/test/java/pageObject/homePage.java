@@ -18,15 +18,21 @@ public class homePage extends BasePage {
 
     // WebElement for 'My Account' link
     @FindBy(xpath = "//span[normalize-space()='My Account']")
-    private WebElement lnkMyaccount;
+    WebElement lnkMyaccount;
 
     // WebElement for 'Register' link
     @FindBy(xpath = "//a[normalize-space()='Register']")
-    private WebElement lnkRegister;
+    WebElement lnkRegister;
 
     // WebElement for 'Login' link
     @FindBy(xpath = "//a[normalize-space()='Login']")
-    private WebElement lnkLogin;
+    WebElement lnkLogin;
+
+    @FindBy(xpath = "//input[@placeholder='Search']")
+    WebElement txtProduct;
+
+    @FindBy(xpath = "//button[@class='btn btn-default btn-lg']")
+    WebElement searchButton;
 
     /**
      * Clicks on the 'My Account' link.
@@ -48,4 +54,15 @@ public class homePage extends BasePage {
     public void clickLogin() {
         lnkLogin.click();
     }
+
+    public void setTxtProduct(String productName) {
+        txtProduct.sendKeys(productName);
+
+    }
+
+    public void ButtonSearch(){
+        searchButton.click();
+    }
+
+
 }
