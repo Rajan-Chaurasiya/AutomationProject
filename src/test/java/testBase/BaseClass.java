@@ -99,18 +99,21 @@ public class BaseClass {
         driver.quit();
     }
 
+    @SuppressWarnings("deprecation")
     public String randomString()
     {
         String generatedstring= RandomStringUtils.randomAlphabetic(5);
         return generatedstring;
     }
 
+    @SuppressWarnings("deprecation")
     public String randomNumber()
     {
         String generatednumber=RandomStringUtils.randomNumeric(10);
         return generatednumber;
     }
 
+    @SuppressWarnings("deprecation")
     public String randomAlphaNumberic()
     {
         String generatedstring=RandomStringUtils.randomAlphabetic(3);
