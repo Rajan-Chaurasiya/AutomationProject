@@ -14,19 +14,19 @@ public class DataProviders {
 
         ExcelUtility xlutil=new ExcelUtility(path);//creating an object for XLUtility
 
-        int totalrows=xlutil.getRowCount("Sheet1");
-        int totalcols=xlutil.getCellCount("Sheet1",1);
+        int totalRows=xlutil.getRowCount("Sheet1");
+        int totalCols=xlutil.getCellCount("Sheet1",1);
 
-        String logindata[][]=new String[totalrows][totalcols];//created for two dimension array which can store the data user and password
+        String[][] loginData =new String[totalRows][totalCols];//created for two dimension array which can store the data user and password
 
-        for(int i=1;i<=totalrows;i++)  //1   //read the data from xl storing in two deminsional array
+        for(int i=1;i<=totalRows;i++)  //1   //read the data from xl storing in two deminsional array
         {
-            for(int j=0;j<totalcols;j++)  //0    i is rows j is col
+            for(int j=0;j<totalCols;j++)  //0    i is rows j is col
             {
-                logindata[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0
+                loginData[i-1][j]= xlutil.getCellData("Sheet1",i, j);  //1,0
             }
         }
-        return logindata;//returning two dimension array
+        return loginData;//returning two dimension array
 
     }
 }

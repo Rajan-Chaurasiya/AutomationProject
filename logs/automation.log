@@ -14,3 +14,8 @@
 13:01:29.971 [main] INFO  testCases.SearchProductTest - Product seached
 13:01:30.029 [main] INFO  testCases.SearchProductTest - click on search button
 13:01:30.526 [main] INFO  testCases.SearchProductTest - Search Test Case Passed
+12:02:38.830 [main] INFO  testCases.SearchProductTest - *** Search Test Case started ***
+12:02:38.843 [main] INFO  testCases.SearchProductTest - Product seached
+12:02:38.904 [main] INFO  testCases.SearchProductTest - click on search button
+12:02:39.452 [main] INFO  testCases.SearchProductTest - Search Test Case Passed
+12:02:39.452 [main] INFO  testCases.SearchProductTest - Search Product Test Case completed
